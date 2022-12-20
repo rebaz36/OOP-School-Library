@@ -1,6 +1,8 @@
 require './person' # import the Person class
 require './student' # import the Student class
 require './teacher' # import the Teacher class
+require_relative './nameable/capitalize_decorator'
+require_relative './nameable/trimmer_decorator'
 
 # example on how to use the classes
 
@@ -21,3 +23,10 @@ puts teacher.name # prints "Bob"
 puts teacher.age # prints 30
 puts teacher.specialization # prints "Physics"
 puts teacher.can_use_services? # prints true, because the teacher can always use services
+
+person1 = Person.new(22, name: 'John', parent_permission: false)
+puts person1.name
+puts capitalized_person = CapitalizeDecorator.new(person1)
+puts capitalized_person.correct_name
+puts capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
+puts capitalized_trimmed_person.correct_name
