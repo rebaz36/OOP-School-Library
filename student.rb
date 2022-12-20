@@ -1,5 +1,7 @@
 # encoding: utf-8 # rubocop:disable Style/encoding
 
+require_relative 'person'
+
 class Student < Person
   attr_reader :classroom # getter for @classroom
 
