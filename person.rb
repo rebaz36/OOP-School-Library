@@ -15,7 +15,7 @@ class Person
 
   private
 
-  def is_of_age?
+  def is_of_age? # rubocop:disable Naming/PredicateName
     @age >= 18
   end
 

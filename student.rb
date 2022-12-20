@@ -1,3 +1,5 @@
+# encoding: utf-8 # rubocop:disable Style/encoding
+
 class Student < Person
   attr_reader :classroom # getter for @classroom
 
@@ -7,6 +9,6 @@ class Student < Person
   end
 
   def play_hooky
-    '¯\\(ツ)/¯'
+    '¯\\_(ツ)_/¯'.encode('utf-8')
   end
 end
