@@ -21,5 +21,6 @@ class Person
 
   def generate_id
     # generate a unique ID for the person
+    Random.rand(1..1000)
   end
 end
