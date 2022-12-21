@@ -13,6 +13,9 @@ class App
     @people = []
   end
 
+  # method for books
+  attr_reader :books, :people
+
   def list_all_books
     @books.each do |book|
       puts book.title

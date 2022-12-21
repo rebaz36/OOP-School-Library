@@ -44,7 +44,7 @@ def main # rubocop:disable Metrics/AbcSize, Metrics/MethodLength, Metrics/Cyclom
       date = gets.chomp
       print "Enter the book's ID: "
       book_id = gets.chomp.to_i
-      book = app.books.push(book_id - 1)
+      book = app.books[book_id - 1]
       print "Enter the person's ID: "
       person_id = gets.chomp.to_i
       person = app.people[person_id - 1]
