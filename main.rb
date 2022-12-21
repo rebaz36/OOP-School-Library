@@ -44,10 +44,12 @@ def main # rubocop:disable Metrics/AbcSize, Metrics/MethodLength, Metrics/Cyclom
       date = gets.chomp
       print "Enter the book's ID: "
       book_id = gets.chomp.to_i
-      book = app.books[book_id - 1]
+      book = app.books[book_id - 1] || (puts "Book with ID #{book_id} not found."
+                                        next)
       print "Enter the person's ID: "
       person_id = gets.chomp.to_i
-      person = app.people[person_id - 1]
+      person = app.people[person_id - 1] || (puts "Person with ID #{person_id} not found."
+                                             next)
       app.create_rental(date, book, person)
     when 6
       # Ask for the person's ID

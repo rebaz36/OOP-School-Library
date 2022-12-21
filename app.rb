@@ -11,6 +11,7 @@ class App
   def initialize
     @books = []
     @people = []
+    @rental = []
   end
 
   # method for books
@@ -50,6 +51,7 @@ class App
 
   def create_rental(date, book, person)
     rental = Rental.new(date, book, person)
+    @rental << rental
   end
 
   def list_all_rentals_for_person(person_id)
