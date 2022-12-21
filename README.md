@@ -121,7 +121,10 @@ Example commands:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **TBA..**
+- [ ] **Add more methods and attributes to the Person and Student classes.**
+- [ ] **Create additional classes that inherit from Person, such as Teacher and Parent.**
+- [ ] **Implement functionality to store and retrieve Person and Student objects from a database.**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
