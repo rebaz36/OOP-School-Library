@@ -8,7 +8,7 @@ class Book
   end
 
   # add rentals
-  def add_rental(rental)
-    @rentals.push(rental)
+  def add_rental(person, date)
+    @rentals.push(person, date, self)
   end
 end
