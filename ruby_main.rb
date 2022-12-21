@@ -72,6 +72,7 @@ book = Book.new('Harry Potter', 'J.K Rowling')
 
 # Rent the book to the person
 rental1 = Rental.new('2022-01-01', book, person)
+puts rental1.date # prints "2022-01-01"
 
 # Print the rentals for the person and the book
 puts person.rentals
