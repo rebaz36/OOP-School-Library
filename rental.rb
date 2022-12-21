@@ -1,3 +1,6 @@
+require './book' # import the Book class
+require './person' # import the Person class
+
 class Rental
   attr_accessor :date, :book, :person # creates setter and getter methods for @date
 
@@ -5,7 +8,7 @@ class Rental
     @date = date
     @book = book
     @person = person
-    book.rentals << self
-    person.rentals << self
+    book.add_rental(person, date)
+    person.add_rental(person, date)
   end
 end

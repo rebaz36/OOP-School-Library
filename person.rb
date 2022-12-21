@@ -21,6 +21,10 @@ class Person < Nameable
     @name
   end
 
+  def add_rental(person, date)
+    @rentals.push(person, date, self)
+  end
+
   private
 
   def is_of_age? # rubocop:disable Naming/PredicateName
