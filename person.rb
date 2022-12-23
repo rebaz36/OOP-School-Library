@@ -4,7 +4,7 @@ class Person < Nameable
   attr_accessor :name, :age, :rentals
   attr_reader :id # getters for @id, @name, and @age
 
-  def initialize(age, name: 'Unknown', parent_permission: true)
+  def initialize( parent_permission: true)
     super()
     @id = Random.rand(1..1000) # generate a unique ID for the person
     @name = name
@@ -18,7 +18,7 @@ class Person < Nameable
   end
 
   def correct_name
-
+    @name
   end
 
   def add_rental(person, date)
