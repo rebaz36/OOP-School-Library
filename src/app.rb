@@ -82,13 +82,17 @@ class App
   def create_rental
     puts 'Select a book from the following list by number:'
     puts "\n"
-    @list_books.each_with_index { |book, index| puts "(#{index}) => #{book.title} (#{book.author}) " }
+    @list_books.each_with_index do |book, index| 
+      puts "(#{index}) => #{book.title} (#{book.author}) "
+    end
     rental_book = gets.chomp.to_i
     puts "\n"
 
     puts 'Select a person from the following list by number [Not id]:'
     puts "\n"
-    @list_people.each_with_index { |people, index| puts "(#{index}) => #{people.name}" }
+    @list_people.each_with_index do |people, index| 
+      puts "(#{index}) => #{people.name}" 
+    end
     rental_person = gets.chomp.to_i
 
     push_rentals(@rentals, Rental.new(@list_books[rental_book], @list_people[rental_person]))
