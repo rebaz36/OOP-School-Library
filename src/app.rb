@@ -72,7 +72,7 @@ class App
     book_author = gets.chomp.capitalize
     book = Book.new(book_title, book_author)
     @list_books.push(book)
-    puts 'Book created succesfully, well done!'
+    puts 'Book created succesfully'
   end
 
   def push_rentals(rentals, rental)
