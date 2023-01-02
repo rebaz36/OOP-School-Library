@@ -11,22 +11,20 @@ Project Description updated upon project completion.
 <!-- Table of Contents -->
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  <!-- - [🚀 Live Demo](#live-demo) -->
-- [💻 Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  <!-- - [Install](#install) -->
-  - [Usage](#usage)
-  <!-- - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment) -->
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
+- [Ruby-Template](#ruby-template)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Ruby-Template ](#-ruby-template-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+    - [Getting Started ](#getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Usage](#usage)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
 <!-- - [📝 License](#license) -->
 
 <!-- PROJECT DESCRIPTION -->
@@ -109,11 +107,11 @@ Example commands:
 - Twitter: [@rebaz415](https://twitter.com/rebaz415)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/rebazf/)
 
-👤 **...**
+👤 **Jonathan Kayizzi**
 
-- GitHub: [@...]()
-- Twitter: [@...]()
-- LinkedIn: [@...]()
+- GitHub: [@JonahKayizzi](https://github.com/JonahKayizzi)
+- Twitter: [@JonahKayizzi](https://twitter.com/JonahKayizzi)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jonathan-kayizzi/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
