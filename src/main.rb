@@ -3,11 +3,13 @@ class Main
   def initialize
     @app = App.new
   end
+
   def welcome
     puts 'Hi! Welcome School Library'
     puts "====================================\n"
     full_list
   end
+
   def full_list
     puts "\n"
     puts 'Please choose an option by entering a number:'
@@ -20,6 +22,7 @@ class Main
     main_input = gets.chomp.to_i
     listed_sections(main_input)
   end
+
   def listed_sections(user_input)
     case user_input
     when 1
@@ -37,6 +40,7 @@ class Main
       creators(user_input)
     end
   end
+
   def creators(creator_input)
     case creator_input
     when 3
