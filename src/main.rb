@@ -7,6 +7,7 @@ class Main
   def welcome
     puts 'Hi! Welcome School Library'
     puts "====================================\n"
+    @app.load_data
     full_list
   end
 
@@ -37,10 +38,6 @@ class Main
     when 7
       @app.save_data
       puts 'Exiting program... We hope to see you soon!'
-    when 8
-      puts 'checking for previous data...'
-      @app.load_data
-      full_list
     else
       creators(user_input)
     end
