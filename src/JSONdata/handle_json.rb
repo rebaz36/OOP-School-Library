@@ -24,7 +24,7 @@ module FileHandler
   # STORE BOOK IN JSON
   def store_books
     array = []
-    @list_books.map do |book|
+    @list_books.each do |book|
       array.push(
         {
           title: book.title,
@@ -53,7 +53,8 @@ module FileHandler
             id: person.id,
             type: person.class,
             age: person.age,
-            name: person.name
+            name: person.name,
+            parent_permission: person.parent_permission
           }
         )
       else
@@ -94,9 +95,9 @@ module FileHandler
       array.push(
         {
           date: rental.date,
-          person_id: rental.person.id,
-          book_title: rental.book.title,
-          person_name: rental.person.name
+          id: rental.id,
+          title: rental.title,
+          name: rental.name
         }
       )
     end
@@ -110,7 +111,7 @@ module FileHandler
       date = rental['date']
       book1 = @list_books.find { |book| book.title == rental['book_title'] }
       person1 = @list_people.find { |person| person.id == rental['person_id'] }
-      @rentals.push(Rental.new(date, book1, person1))
+      @rentals.push(Rental.new(book1, person1, date))
     end
   end
 end
