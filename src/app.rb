@@ -48,9 +48,7 @@ class App
 
   def create_teacher
     puts 'Age:'
-    teacher_age = gets.chomp.to_i
-    age_checker(teacher_age)
-    teacher_age = gets.chomp.to_i
+    teacher_age = gets.chomp.to_ire
 
     puts 'Name:'
     teacher_name = gets.chomp.capitalize
