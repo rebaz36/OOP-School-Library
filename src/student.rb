@@ -1,7 +1,7 @@
 require_relative './add'
 
 class Student < Person
-  attr_reader :classroom
+  attr_reader :classroom, :name, :id
 
   def initialize(age, classroom, name = 'Unknown', parent_permission: true)
     super(age, name, parent_permission)

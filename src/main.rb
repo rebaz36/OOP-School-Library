@@ -14,7 +14,7 @@ class Main
     puts "\n"
     puts 'Please choose an option by entering a number:'
     options = ['List all books', 'List all people', 'Create a person', 'Create a book', 'Create a rental',
-               'List all rentals for a given person id', 'Exit']
+               'List all rentals for a given person id', 'Exit', 'checking for previous data...']
     options.each.with_index(1) do |option, index|
       puts "#{index}. #{option}"
     end
@@ -35,7 +35,12 @@ class Main
       @app.list_rentals
       full_list
     when 7
+      @app.save_data
       puts 'Exiting program... We hope to see you soon!'
+    when 8
+      puts 'checking for previous data...'
+      @app.load_data
+      full_list
     else
       creators(user_input)
     end

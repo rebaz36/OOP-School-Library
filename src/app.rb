@@ -4,6 +4,7 @@ require_relative './teacher'
 require_relative './rental'
 require_relative './modules/list'
 require_relative './modules/check'
+require_relative './JSONdata/handle_json'
 
 class App
   def initialize
@@ -14,6 +15,7 @@ class App
 
   include ShowList
   include CheckConditions
+  include FileHandler
 
   def create_person
     puts 'Do you want to create a Student (1) or a Teacher (2) [Input the number]:'
@@ -90,5 +92,22 @@ class App
     push_rentals(@rentals, Rental.new(@list_books[rental_book], @list_people[rental_person]))
     puts 'Rental created succesfully, well done!'
     puts "\n"
+  end
+
+  def save_data
+    puts 'Saving Data in Json format...'
+    store_books
+    store_people
+
+    # File.write(JSON.pretty_generate({ people: @list_people, books: @list_books, rentals: @rentals }))
+    puts 'Data saved succesfully!'
+  end
+
+  def load_data
+    puts 'Loading Data from Json format...'
+    read_books
+    read_people
+
+    puts 'Data loaded succesfully!'
   end
 end
