@@ -89,7 +89,7 @@ class App
     @list_people.each_with_index { |people, index| puts "(#{index}) => #{people.name}" }
     rental_person = gets.chomp.to_i
 
-    push_rentals(@rentals, Rental.new(@list_books[rental_book], @list_people[rental_person]))
+    push_rentals(@rentals, Rental.new(@list_books[rental_book].title, @list_people[rental_person].name, @list_people[rental_person].id))
     puts 'Rental created succesfully, well done!'
     puts "\n"
   end
@@ -98,7 +98,7 @@ class App
     puts 'Saving Data in Json format...'
     store_books
     store_people
-
+    store_rentals
     # File.write(JSON.pretty_generate({ people: @list_people, books: @list_books, rentals: @rentals }))
     puts 'Data saved succesfully!'
   end
@@ -107,7 +107,7 @@ class App
     puts 'Loading Data from Json format...'
     read_books
     read_people
-
+    read_rentals
     puts 'Data loaded succesfully!'
   end
 end
