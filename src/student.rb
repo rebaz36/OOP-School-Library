@@ -1,4 +1,3 @@
-#!/bin/env ruby
 # encoding: utf-8 # rubocop:disable Style/encoding
 
 require_relative './add'
