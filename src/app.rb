@@ -32,18 +32,16 @@ class App
   def create_student
     puts 'Age:'
     student_age = gets.chomp.to_i
-    age_stud_checker(student_age)
-    student_age = gets.chomp.to_i
 
     puts 'Name:'
     student_name = gets.chomp.capitalize
-    label = 'Student'
+    # label = 'Student'
 
     puts 'Do you have parent permission? [y/n]:'
     student_permission = gets.chomp
     permission_checker(student_permission)
 
-    student = Student.new(student_age, label, student_name, student_permission)
+    student = Student.new(student_age, student_name, student_permission)
     @list_people.push(student)
     puts 'Person created successfully!'
   end
