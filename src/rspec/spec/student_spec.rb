@@ -50,4 +50,17 @@ describe Student do
   it 'Should display a hardcode emoji when call play_hooky' do
     expect(student.play_hooky).to eq '¯\(ツ)/¯'
   end
+
+  context 'When testing classroom method' do
+    it 'Should return the correct classroom' do
+      expect(student.classroom).to eq(classroom)
+    end
+  end
+
+  context 'When testing add_students method' do
+    it 'Should add a student to the classroom' do
+      student_2 = Student.new(25, classroom, 'Neeraj Bardwaj')
+      expect { classroom.add_students(student_2) }.to change { classroom.students.length }.by(1)
+    end
+  end
 end
