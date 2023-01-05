@@ -63,5 +63,4 @@ describe Person do
       expect(person3.correct_name).to eql('Angel Uray')
     end
   end
-
 end
