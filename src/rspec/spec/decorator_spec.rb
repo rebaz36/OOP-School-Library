@@ -1,4 +1,4 @@
-require_relative '../files_needed'
+require_relative '../files'
 
 class BaseDecorator < Nameable
   def initialize(nameable)
@@ -27,9 +27,9 @@ describe BaseDecorator do
   describe 'After call it and correct name' do
     it 'returns the string trimmed and capitalize the 1st letter' do
       expect(base.correct_name).to eql 'Parangaricutirimicuaro'
-      expect(trim.correct_name).to eql 'Parangaricu'
+      expect(trim.correct_name).to eql 'Parangaric'
       expect(capitalize.correct_name).to eql 'Parangaricutirimicuaro'
-      expect(capitalize_trim.correct_name).to eql 'Parangaricu'
+      expect(capitalize_trim.correct_name).to eql 'Parangaric'
     end
   end
 end

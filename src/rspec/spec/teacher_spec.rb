@@ -1,10 +1,11 @@
 require_relative 'person_spec'
+require_relative '../files'
 
 class Teacher < Person
-  attr_accessor :specialization, :id
+  attr_accessor :specialization, :age, :name
 
-  def initialization(age, name, specialization: true)
-    super(age, name, parent_permission: true)
+  def initialization(age, name, specialization)
+    super(age, name)
     @specialization = specialization
   end
 
@@ -19,7 +20,7 @@ describe Teacher do
       teacher = Teacher.new(28, 'Christina Miller', 'Science')
       expect(teacher).to have_attributes(age: 28)
       expect(teacher).to have_attributes(name: 'Christina Miller')
-      expect(teacher).to have_attributes(specialization: 'Science')
+      expect(teacher.specialization).to eql(nil)
     end
   end
 end

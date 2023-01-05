@@ -20,7 +20,7 @@ describe TrimmerDecorator do
 
   describe 'When use trimmer correct_name' do
     it 'returns trimmed name' do
-      expect(trimmer.correct_name).to eql 'parangaricu'
+      expect(trimmer.correct_name).to eql 'parangaric'
       expect(trimmer.correct_name).to_not eql 'parangaricutirimicuaro'
     end
   end

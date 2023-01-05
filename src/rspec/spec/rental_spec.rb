@@ -4,7 +4,7 @@ require_relative 'person_spec'
 class Rental
   attr_accessor :date, :title, :name, :id
 
-  def initialize(book_title, customer_name, customer_id, date = Date.today)
+  def initialize(book_title, customer_name, customer_id, date)
     @date = date
     @name = customer_name
     @id = customer_id
@@ -19,15 +19,15 @@ end
 describe Rental do
   let(:person) { Person.new(12, 'Maddison') }
   let(:book) { Book.new('Harry', 'JK Rowling') }
-  let(:rental) { Rental.new('10/12/2022', book, person) }
+  let(:rental) { Rental.new(book.title, person.name, person.id, '10/12/2022') }
 
   it 'Should create a new instance' do
     expect(rental).to be_instance_of Rental
   end
 
   it 'Should create a Rental object' do
-    expect(rental.name).to have_attributes(name: 'Maddison')
-    expect(rental.title).to have_attributes(title: 'Harry')
+    expect(rental).to have_attributes(name: 'Maddison')
+    expect(rental).to have_attributes(title: 'Harry')
     expect(rental.date).to eql '10/12/2022'
     expect(rental.rentals).to eql('Harry: Maddison 10/12/2022')
   end

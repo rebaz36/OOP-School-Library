@@ -21,14 +21,30 @@ class Student < Person
   end
 end
 
+class Classroom
+  attr_accessor :label
+  attr_reader :students
+
+  def initialize(label)
+    @label = label
+    @students = []
+  end
+
+  def add_students(student)
+    @students.push(student)
+    student.classroom = self
+  end
+end
+
 describe Student do
-  let(:student) { Student.new(25, 'Neeraj Bardwaj', true) }
+  let(:classroom) { Classroom.new('Math') }
+  let(:student) { Student.new(25, classroom, 'Neeraj Bardwaj') }
 
   it 'Should create a student ' do
     expect(student).to be_instance_of Student
     expect(student).to have_attributes(age: 25)
     expect(student).to have_attributes(name: 'Neeraj Bardwaj')
-    expect(student.parent_permission[:parent_permission]).to be true
+    expect(student).to have_attributes(parent_permission: false)
   end
 
   it 'Should display a hardcode emoji when call play_hooky' do

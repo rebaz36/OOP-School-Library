@@ -1,4 +1,4 @@
-require_relative '../files_needed'
+require_relative '../files'
 
 class Person < Nameable
   attr_accessor :name, :age, :rentals, :parent_permission, :id
