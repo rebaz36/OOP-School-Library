@@ -32,9 +32,17 @@ describe Classroom do
 
   describe 'Add a student' do
     it 'Add a new student into student classroom' do
-      classroom.add_student(Student.new(15, 'Melanie', true))
-      classroom.add_student(Student.new(20, 'Austria', false))
+      classroom.add_student(Student.new(15, self, 'Melanie'))
+      classroom.add_student(Student.new(20, self, 'Austria'))
       expect(classroom.students.size).to eql 2
+    end
+  end
+
+  describe 'Add a student' do
+    it 'Add a new student into student classroom' do
+      classroom.add_student(Student.new(15, self, 'Melanie'))
+      classroom.add_student(Student.new(20, self, 'Austria'))
+      expect(classroom.students[0].name).to eql 'Melanie'
     end
   end
 end
