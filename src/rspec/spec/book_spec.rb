@@ -1,16 +1,4 @@
-class Book
-  attr_accessor :title, :author, :rentals
-
-  def initialize(title, author)
-    @title = title
-    @author = author
-    @rentals = []
-  end
-
-  def add_rental(date, customer)
-    Rental.new(self, customer, date)
-  end
-end
+require_relative '../../book'
 
 describe Book do
   context 'When testing the Book class' do
@@ -22,4 +10,5 @@ describe Book do
       expect(book.rentals).to match_array([])
     end
   end
+
 end
