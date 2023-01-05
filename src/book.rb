@@ -10,7 +10,7 @@ class Book
   end
 
   def add_rentals(date, customer)
-    rental = Rental.new(@title, customer.name, customer.id, date)
+    rental = Rental.new(@title, customer, date)
     @rentals.push(rental)
   end
 end

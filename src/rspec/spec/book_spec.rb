@@ -11,4 +11,12 @@ describe Book do
     end
   end
 
+  context 'When testing the add_rentals method' do
+    it 'should add a new rental to the rentals array' do
+      book = Book.new('Harry', 'JK Rowling')
+      rental = book.add_rentals('2021-01-01', 'John')
+      expect(book.rentals).to match_array(rental)
+    end
+  end
+
 end
