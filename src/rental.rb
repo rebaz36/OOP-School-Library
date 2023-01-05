@@ -8,8 +8,6 @@ class Rental
     @name = customer_name
     @id = customer_id
     @title = book_title
-    # customer.rentals.push(self)
-    # book.rentals.push(self)
   end
 
   def rentals
