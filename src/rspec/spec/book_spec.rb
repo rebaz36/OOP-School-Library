@@ -18,5 +18,4 @@ describe Book do
       expect(book.rentals).to match_array(rental)
     end
   end
-
 end

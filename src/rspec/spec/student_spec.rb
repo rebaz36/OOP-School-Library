@@ -59,8 +59,8 @@ describe Student do
 
   context 'When testing add_students method' do
     it 'Should add a student to the classroom' do
-      student_2 = Student.new(25, classroom, 'Neeraj Bardwaj')
-      expect { classroom.add_students(student_2) }.to change { classroom.students.length }.by(1)
+      student2 = Student.new(25, classroom, 'Neeraj Bardwaj')
+      expect { classroom.add_students(student2) }.to change { classroom.students.length }.by(1)
     end
   end
 end
