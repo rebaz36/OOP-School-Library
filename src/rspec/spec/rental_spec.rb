@@ -17,4 +17,8 @@ describe Rental do
     expect(rental.date).to eql '10/12/2022'
     expect(rental.rentals).to eql('Harry: Maddison 10/12/2022')
   end
+
+  it 'Should test the rentals method' do
+    expect(rental.rentals).to eql('Harry: Maddison 10/12/2022')
+  end
 end
