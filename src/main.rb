@@ -5,7 +5,10 @@ class Main
   end
 
   def welcome
-    puts 'Hi! Welcome School Library'
+    sleep(1)
+    system('clear')
+    system('cls')
+    puts 'Hi! Welcome to Our School Library'
     puts "====================================\n"
     @app.load_data
     full_list
