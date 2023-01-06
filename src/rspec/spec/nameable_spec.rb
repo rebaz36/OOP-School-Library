@@ -1,8 +1,5 @@
-class Nameable
-  def correct_name
-    raise NotImplementedError, 'This is an error'
-  end
-end
+require_relative '../files'
+require_relative '../../nameable'
 
 describe Nameable do
   let(:nameable) { Nameable.new }

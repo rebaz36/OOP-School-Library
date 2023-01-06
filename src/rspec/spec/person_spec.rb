@@ -1,31 +1,6 @@
 require_relative '../files'
 require_relative '../../book'
-
-class Person < Nameable
-  attr_accessor :name, :age, :rentals, :parent_permission, :id
-
-  def initialize(age, name = 'unknown', parent_permission = true)
-    super()
-    @id = 25
-    @name = name
-    @age = age
-    @parent_permission = parent_permission
-    @rentals = []
-  end
-
-  def can_use_services?
-    return unless @age >= 18 || @parent_permission == true
-  end
-
-  def correct_name
-    @correct_name = name
-  end
-
-  def add_rental(date, book)
-    rental = Rental.new(date, book, self)
-    @rentals.push(rental)
-  end
-end
+require_relative '../../person'
 
 describe Person do
   context 'When testing Person class' do
@@ -35,7 +10,6 @@ describe Person do
       expect(person).to have_attributes(name: 'Angel Uray')
       expect(person).to have_attributes(age: 15)
       expect(person).to have_attributes(parent_permission: false)
-      expect(person).to have_attributes(id: 25)
       expect(person.rentals).to match_array([])
     end
   end
@@ -53,7 +27,7 @@ describe Person do
   context 'When testing can_use_services? method' do
     it 'Should return true if the person is of age' do
       person2 = Person.new(15, 'Angel Uray', true)
-      expect(person2.can_use_services?).to be_falsey
+      expect(person2.can_use_services?).to be_truthy
     end
   end
 

@@ -1,18 +1,6 @@
 require_relative 'person_spec'
 require_relative '../files'
-
-class Teacher < Person
-  attr_accessor :specialization, :age, :name
-
-  def initialization(age, name, specialization)
-    super(age, name)
-    @specialization = specialization
-  end
-
-  def can_use_services?
-    true
-  end
-end
+require_relative '../../teacher'
 
 describe Teacher do
   context 'When test the Teacher class' do

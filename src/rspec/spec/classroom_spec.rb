@@ -1,19 +1,6 @@
 require_relative 'student_spec'
-
-class Classroom
-  attr_accessor :label
-  attr_reader :students
-
-  def initialize(label)
-    @label = label
-    @students = []
-  end
-
-  def add_student(student)
-    @students.push(student)
-    student.classroom = self
-  end
-end
+require_relative '../files'
+require_relative '../../classroom'
 
 describe Classroom do
   let(:classroom) { Classroom.new('Science') }
@@ -32,16 +19,16 @@ describe Classroom do
 
   describe 'Add a student' do
     it 'Add a new student into student classroom' do
-      classroom.add_student(Student.new(15, self, 'Melanie'))
-      classroom.add_student(Student.new(20, self, 'Austria'))
+      classroom.add_students(Student.new(15, self, 'Melanie'))
+      classroom.add_students(Student.new(20, self, 'Austria'))
       expect(classroom.students.size).to eql 2
     end
   end
 
   describe 'Add a student' do
     it 'Add a new student into student classroom' do
-      classroom.add_student(Student.new(15, self, 'Melanie'))
-      classroom.add_student(Student.new(20, self, 'Austria'))
+      classroom.add_students(Student.new(15, self, 'Melanie'))
+      classroom.add_students(Student.new(20, self, 'Austria'))
       expect(classroom.students[0].name).to eql 'Melanie'
     end
   end

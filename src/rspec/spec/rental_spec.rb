@@ -3,7 +3,7 @@ require_relative 'person_spec'
 require_relative '../../rental'
 
 describe Rental do
-  let(:person) { Person.new(12, 'Maddison') }
+  let(:person) { Person.new(12, 'Maddison', false) }
   let(:book) { Book.new('Harry', 'JK Rowling') }
   let(:rental) { Rental.new(book.title, person.name, '10/12/2022') }
 
